@@ -1,0 +1,52 @@
+
+<html>
+<head>
+<title> Countries name </title>
+</head>
+<body  >
+  <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+          <script src="/socket.io/socket.io.js"></script>
+  <table border="4" >
+<tbody>
+  <tr>
+    <th>countries name</th>
+  </tr>
+    <tr ><td id="i0">1</td></tr>
+    <tr ><td id="i1">2</td></tr>
+    <tr ><td id="i2">3</td></tr>
+    <tr><td  id="i3">4</td></tr>
+    <tr><td  id="i4">5</td></tr>
+    <tr><td  id="i5">6</td></tr>
+    <tr><td  id="i6">7</td></tr>
+    <tr><td  id="i7">8</td></tr>
+    <tr><td  id="i8">9</td></tr>
+</tbody></table>
+
+<script>
+var socket= io();
+socket.on('connect', (data) => {
+
+});
+socket.on('hello', (result)=>{
+  $('#i1').html(result[1].countryname);
+  $('#i2').html(result[2].countryname);
+  $('#i3').html(result[3].countryname);
+  $('#i4').html(result[4].countryname);
+  $('#i5').html(result[5].countryname);
+  $('#i6').html(result[6].countryname);
+  $('#i7').html(result[7].countryname);
+  $('#i8').html(result[8].countryname);
+  $('#i9').html(result[9].countryname);
+});
+
+
+
+</script>
+
+
+
+
+</body >
+</html>
